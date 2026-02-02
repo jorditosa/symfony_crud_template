@@ -1,0 +1,17 @@
+{% extends "base.html.twig" %}
+
+{% block body %}
+
+<h2>Eliminar informació del Producte</h2>
+
+<p>Confirmes eliminació?</p>
+
+<form method="post">
+
+    <button>Si</button>
+
+    <a href="{{ path('product_show', {'id': id}) }}">No</a>
+
+</form>
+	
+{% endblock %}

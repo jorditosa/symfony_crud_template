@@ -1,0 +1,28 @@
+{% extends "base.html.twig" %}
+
+{% block body %}
+
+	<h2>Producte - {{ product.name }}</h2>
+
+	<table>
+		<tbody>
+				<tr>
+					<th>Nom</th>
+					<th>{{ product.name }}</th>
+				</tr>
+				<tr>
+					<th>Descripció</th>
+					<th>{{ product.description }}</th>
+				</tr>
+				<tr>
+					<th>Talla</th>
+					<th>{{ product.size }}</th>
+				</tr>
+		</tbody>
+	</table>
+
+	<a href="{{ path('product_edit', {'id': product.id }) }}">Editar informació Producte</a>
+
+	<a href="{{ path('product_delete', {'id': product.id }) }}">Eliminar Producte</a>
+
+{% endblock %}
